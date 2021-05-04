@@ -3,7 +3,7 @@ class BWCS_Settings_Page{
     public function __construct() {
         add_action( 'admin_menu' , array( $this , 'bwcs_create_settings_page' ) );
         add_action( 'admin_post_bwcs_admin_page' , array( $this , 'bwcs_save_form' ) );
-        add_filter( 'plugin_action_links_bw-coming-soon-page/coming-soon-page.php' , array( $this , 'bwcs_add_settings_link' ) );
+        add_filter( 'plugin_action_links_bw-coming-soon-page/bw-coming-soon-page.php' , array( $this , 'bwcs_add_settings_link' ) );
     }
 
     public function bwcs_create_settings_page(){

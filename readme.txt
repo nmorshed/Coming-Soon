@@ -1,6 +1,6 @@
 === Coming soon Page ===
 Contributors: niaj, betterwizard
-Tags: coming-soon, maintainance
+Tags: coming-soon, maintainance, maintainance mode, wordpress-coming-soon
 Requires at least: 4.0
 Tested up to: 5.7
 Requires PHP: 5.6
