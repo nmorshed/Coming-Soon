@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: BW Coming soon Page
-Plugin URI: https://github.com/nmorshed/Coming-Soon-Page
+Plugin URI: https://github.com/nmorshed/bw-coming-soon-page
 Description: You can set an existing page as a coming soon/Maintenance page and you can build this page as you want with your editor or favorite page builder.
 Author: Better Wizard
 Author URI: http://betterwizard.com/
