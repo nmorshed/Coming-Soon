@@ -49,6 +49,9 @@ if ( ! function_exists( 'bw_create_coming_soon_page' )) {
 
 }
 
+// Plugin basename
+define( 'PLUGIN_BASENAME', plugin_basename(__FILE__) );
+
 
 //Add Necessary Files
 require_once( plugin_dir_path( __FILE__ ) . 'includes/helper-functions.php' );
