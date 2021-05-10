@@ -3,7 +3,8 @@
 	<?php
 	wp_nonce_field( "bwcs_settings" );
 	$bwcs_enable_plugin = get_option( 'bwcs_enable_plugin' );
-	$plugin_enabled = ( $bwcs_enable_plugin != 0 ) ? 'checked' : '';
+	
+	$plugin_enabled = ( $bwcs_enable_plugin != 'disabled' ) ? 'checked' : '';
 
 	?>
 	<input type="hidden" name="action" value="bwcs_admin_page">
@@ -17,7 +18,7 @@
 					<label for="bwcs_enable_plugin"> <?php _e( 'Enable This Plugin', 'bwcs' ); ?> </label>
 				</th>
 				<td>
-					<input name="bwcs_enable_plugin" type="checkbox" id="bwcs_enable_plugin" value="1" <?php echo $plugin_enabled; ?> />
+					<input name="bwcs_enable_plugin" type="checkbox" id="bwcs_enable_plugin" value="enabled" <?php echo $plugin_enabled; ?> />
 					<label for="bwcs_enable_plugin">Enable</label>
 				</td>
 			</tr>

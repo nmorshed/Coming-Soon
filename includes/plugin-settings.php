@@ -8,7 +8,7 @@ function bwcs_redirection_process()
 	$current_user_role 		= wp_get_current_user()->roles[0];
 	$current_page_id 		= get_queried_object_id();
 	$coming_soon_page_id	= get_option( 'bwcs_coming_soon_page' );
-	$shop_page_id 			= get_option( 'woocommerce_shop_page_id' );
+	echo $shop_page_id 			= get_option( 'woocommerce_shop_page_id' );
 
 	if ( empty( $coming_soon_page_id ) ) {
 		$coming_soon_page_id = get_page_by_path( 'coming-soon' )->ID;

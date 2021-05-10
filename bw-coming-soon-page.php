@@ -1,14 +1,18 @@
 <?php
 /*
-Plugin Name: BW Coming soon Page
-Plugin URI: https://github.com/nmorshed/bw-coming-soon-page
-Description: You can set an existing page as a coming soon/Maintenance page and you can build this page as you want with your editor or favorite page builder.
-Author: Better Wizard
-Author URI: http://betterwizard.com/
-Version: 1.0.0
-Developer: Niaj Morshed
-license: GPLv2 or later
-Text Domain: bwcs
+Plugin Name:		BW Coming soon Page
+Plugin URI:			https://github.com/nmorshed/bw-coming-soon-page
+Description:		You can set an existing page as a coming soon/Maintenance page and you can build this page as you want with your editor or favorite page builder.
+Version:			1.0.0
+Requires at least:	4.0
+Requires PHP:		5.6
+Author:				Better Wizard
+Author URI:			http://betterwizard.com
+Developer:			Niaj Morshed
+License: 			GPL v2 or later
+License URI:		https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: 		bwcs
+Domain Path:		/languages
 */
 
 
