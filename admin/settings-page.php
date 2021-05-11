@@ -3,7 +3,7 @@ class BWCS_Settings_Page{
     public function __construct() {
         add_action( 'admin_menu' , array( $this , 'bwcs_create_settings_page' ) );
         add_action( 'admin_post_bwcs_admin_page' , array( $this , 'bwcs_save_form' ) );
-        add_filter( 'plugin_action_links_' . PLUGIN_BASENAME , array( $this , 'bwcs_add_settings_link' ) );
+        add_filter( 'plugin_action_links_' . BWCS_PLUGIN_BASENAME , array( $this , 'bwcs_add_settings_link' ) );
     }
 
     public function bwcs_create_settings_page(){
@@ -27,8 +27,8 @@ class BWCS_Settings_Page{
         // Get values from user
         $enable_value       = isset( $_POST['bwcs_enable_plugin'] ) ? 'enabled' : 'disabled';
         $coming_soon_page   = sanitize_text_field( $_POST['bwcs_coming_soon_page'] );
-        $roles              = isset( $_POST['bwcs_roles'] ) ? $this->bwcs_recursive_sanitize_array($_POST['bwcs_roles']) : array();
-        $pages              = isset( $_POST['bwcs_other_pages'] ) ? $this->bwcs_recursive_sanitize_array($_POST['bwcs_other_pages']) : array();
+        $roles              = isset( $_POST['bwcs_roles'] ) ? $this->bwcs_recursive_sanitize_array( $_POST['bwcs_roles'] ) : array();
+        $pages              = isset( $_POST['bwcs_other_pages'] ) ? $this->bwcs_recursive_sanitize_array( $_POST['bwcs_other_pages'] ) : array();
 
 
         // Save Enable/Disable plugin        
@@ -55,10 +55,10 @@ class BWCS_Settings_Page{
     }
 
     // Sanitize Array
-    function bwcs_recursive_sanitize_array($array) {
+    function bwcs_recursive_sanitize_array( $array ) {
         foreach ( $array as $key => &$value ) {
             if ( is_array( $value ) ) {
-                $value = recursive_sanitize_text_field($value);
+                $value = recursive_sanitize_text_field( $value );
             }
             else {
                 $value = sanitize_text_field( $value );

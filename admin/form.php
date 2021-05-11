@@ -19,7 +19,7 @@
 				</th>
 				<td>
 					<input name="bwcs_enable_plugin" type="checkbox" id="bwcs_enable_plugin" value="enabled" <?php echo $plugin_enabled; ?> />
-					<label for="bwcs_enable_plugin">Enable</label>
+					<label for="bwcs_enable_plugin"> Enable </label>
 				</td>
 			</tr>
 

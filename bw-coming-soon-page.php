@@ -50,7 +50,7 @@ if ( ! function_exists( 'bw_create_coming_soon_page' )) {
 }
 
 // Plugin basename
-define( 'PLUGIN_BASENAME', plugin_basename(__FILE__) );
+define( 'BWCS_PLUGIN_BASENAME', plugin_basename(__FILE__) );
 
 
 //Add Necessary Files
