@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' )){
 /***************************************************
 	Create a Coming Soon Page on Activation
 ***************************************************/
-if ( ! function_exists( 'bw_create_coming_soon_page' )) {
+if ( ! function_exists( 'bw_create_coming_soon_page' ) ) {
 	
 	function bw_create_coming_soon_page(){
 
@@ -39,18 +39,18 @@ if ( ! function_exists( 'bw_create_coming_soon_page' )) {
 
 			);
 
-			wp_insert_post( $args, false );
+			wp_insert_post( $args , false );
 			
 		}
 
 	}	    
 
-	register_activation_hook( __FILE__, 'bw_create_coming_soon_page' );
+	register_activation_hook( __FILE__ , 'bw_create_coming_soon_page' );
 
 }
 
 // Plugin basename
-define( 'BWCS_PLUGIN_BASENAME', plugin_basename(__FILE__) );
+define( 'BWCS_PLUGIN_BASENAME' , plugin_basename(__FILE__) );
 
 
 //Add Necessary Files
