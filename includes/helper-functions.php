@@ -1,6 +1,6 @@
 <?php
-if ( function_exists( 'bw_coming_soon_if_page_exists' ) ) {
-	
+if ( ! function_exists( 'bw_coming_soon_if_page_exists' ) ) {
+
 	function bw_coming_soon_if_page_exists($slug) {
 
 	    global $wpdb;
