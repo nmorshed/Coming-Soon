@@ -1,13 +1,13 @@
 <?php
 /*
-Plugin Name:		BW Coming soon Page
-Plugin URI:			https://github.com/nmorshed/bw-coming-soon-page
+Plugin Name:		Coming soon Page
+Plugin URI:			http://betterwizard.com
 Description:		You can set an existing page as a coming soon/Maintenance page and you can build this page as you want with your editor or favorite page builder.
-Version:			1.0.0
+Version:			1.0.1
 Requires at least:	4.0
 Requires PHP:		5.6
 Author:				Better Wizard
-Author URI:			http://betterwizard.com
+Author URI:			http://niaj.me
 Developer:			Niaj Morshed
 License: 			GPL v2 or later
 License URI:		https://www.gnu.org/licenses/gpl-2.0.html
@@ -19,6 +19,9 @@ Domain Path:		/languages
 if ( ! defined( 'ABSPATH' )){
     exit();
 }
+
+// include Appsero
+require __DIR__ . '/vendor/autoload.php';
 
 /***************************************************
 	Create a Coming Soon Page on Activation
@@ -59,3 +62,21 @@ require_once( plugin_dir_path( __FILE__ ) . 'includes/plugin-settings.php' );
 if ( is_admin() ) {
     require_once( plugin_dir_path( __FILE__ ) . 'admin/settings-page.php' );
 }
+
+
+
+/**
+ * Initialize the plugin tracker
+ *
+ * @return void
+ */
+function appsero_init_tracker_bw_coming_soon_page() {
+
+    $client = new Appsero\Client( '4e03c768-3fea-4cdb-a288-45eda855619a', 'Coming soon Page', __FILE__ );
+
+    // Active insights
+    $client->insights()->init();
+
+}
+
+appsero_init_tracker_bw_coming_soon_page();
